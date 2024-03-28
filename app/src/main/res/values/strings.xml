@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ChallengeChapter2</string>
+    <string name="example_bill" translatable="false">ex: 100000</string>
+    <string name="label_bill_amount">Bill Amount</string>
+    <string name="app_title">Choose Your Tip</string>
+    <string name="service_question">How Was The Service?</string>
+    <string name="tip_label">Your Tip: Rp.</string>
+    <string name="tip_amount" translatable="false">0</string>
+    <string name="amount_label">Final Bill</string>
+    <string name="amount_final" translatable="false">Rp </string>
+    <string name="tip_ok">OK \n(15%)</string>
+    <string name="tip_good">Good (18%)</string>
+    <string name="tip_amazing">Amazing (20%)</string>
+    <string name="btn_calc">Calculate</string>
+    <string name="switch_label">Round Up</string>
+    <string name="iv_binar_desc" translatable="false">Binar Icon</string>
+    <string name="final_bill_amount" translatable="false">0,-</string>
+    <string name="roundup_label">Round Up: Rp.</string>
+</resources>

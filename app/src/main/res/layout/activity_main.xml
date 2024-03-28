@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title"
+        style="@style/CommonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/app_title"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_bill_label"
+        style="@style/CommonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_bill_amount"
+        app:layout_constraintStart_toStartOf="@id/et_bill_amount"
+        app:layout_constraintBottom_toTopOf="@id/et_bill_amount"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_bill_amount"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="@string/example_bill"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_tip_question"
+        style="@style/CommonTextView"
+        android:layout_marginTop="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/service_question"
+        app:layout_constraintTop_toBottomOf="@id/et_bill_amount"
+        app:layout_constraintStart_toStartOf="@id/btn_tip_ok"
+        app:layout_constraintEnd_toEndOf="@id/btn_tip_amazing"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_tip_ok"
+        style="@style/CommonButton"
+        android:layout_width="110dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tip_ok"
+        app:layout_constraintStart_toStartOf="@id/et_bill_amount"
+        app:layout_constraintTop_toBottomOf="@id/tv_tip_question" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_tip_good"
+        style="@style/CommonButtonStartMargin"
+        android:layout_width="110dp"
+        android:text="@string/tip_good"
+        app:layout_constraintTop_toTopOf="@id/btn_tip_ok"
+        app:layout_constraintStart_toEndOf="@id/btn_tip_ok"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_tip_amazing"
+        style="@style/CommonButtonStartMargin"
+        android:layout_width="110dp"
+        android:text="@string/tip_amazing"
+        app:layout_constraintTop_toTopOf="@id/btn_tip_good"
+        app:layout_constraintStart_toEndOf="@id/btn_tip_good"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/sw_roundUp"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/switch_label"
+        app:layout_constraintStart_toStartOf="@id/btn_tip_amazing"
+        app:layout_constraintTop_toBottomOf="@id/btn_tip_amazing"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_calculate"
+        android:layout_width="335dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/btn_calc"
+        android:textSize="24sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sw_roundUp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_finalTiplabel"
+        style="@style/CommonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_label"
+        app:layout_constraintStart_toStartOf="@id/btn_calculate"
+        app:layout_constraintTop_toBottomOf="@id/btn_calculate"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_roundUpLabel"
+        style="@style/CommonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="@string/roundup_label"
+        app:layout_constraintStart_toStartOf="@id/tv_finalTiplabel"
+        app:layout_constraintTop_toBottomOf="@id/tv_finalTiplabel" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_finalTipAmount"
+        style="@style/CommonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/tip_amount"
+        app:layout_constraintStart_toEndOf="@id/tv_roundUpLabel"
+        app:layout_constraintTop_toBottomOf="@id/btn_calculate" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_roundUpTipAmount"
+        style="@style/CommonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginStart="24dp"
+        android:text="@string/tip_amount"
+        app:layout_constraintStart_toEndOf="@id/tv_finalTiplabel"
+        app:layout_constraintTop_toBottomOf="@+id/tv_finalTiplabel" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/iv_binar_desc"
+        app:layout_constraintStart_toStartOf="@id/btn_calculate"
+        app:layout_constraintTop_toBottomOf="@id/btn_calculate"
+        android:src="@drawable/ic_binar"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_FinalBillLabel"
+        style="@style/CommonTextView"
+        android:layout_width="168dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/amount_label"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_logo"
+        app:layout_constraintTop_toTopOf="@id/iv_logo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_finalBillRPText"
+        style="@style/CommonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/amount_final"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_FinalBillLabel"
+        app:layout_constraintTop_toBottomOf="@id/tv_FinalBillLabel"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_finalBillAmount"
+        style="@style/CommonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/final_bill_amount"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tv_finalBillRPText"
+        app:layout_constraintTop_toBottomOf="@id/tv_FinalBillLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

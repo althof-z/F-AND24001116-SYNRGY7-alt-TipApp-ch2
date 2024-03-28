@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ChallengeChapter2</string>
+    <string name="label_bill_amount">Jumlah Tagihan</string>
+    <string name="app_title">Pilih Jumlah Tip</string>
+    <string name="service_question">Bagaimana Pelayanannya?</string>
+    <string name="tip_label">Tip anda: Rp.</string>
+    <string name="amount_label">Tagihan Akhir</string>
+    <string name="tip_ok">OK (15%)</string>
+    <string name="tip_good">Bagus (18%)</string>
+    <string name="tip_amazing">Keren (20%)</string>
+    <string name="btn_calc">Hitung</string>
+    <string name="switch_label">Bulatkan</string>
+    <string name="roundup_label">Pembulatan: Rp.</string>
+</resources>
